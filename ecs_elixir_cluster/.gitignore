@@ -35,3 +35,4 @@ ecs_elixir_cluster-*.tar
 npm-debug.log
 /assets/node_modules/
 
+/priv/static/*
