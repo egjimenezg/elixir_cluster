@@ -18,6 +18,7 @@ defmodule EcsElixirClusterWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/cluster/status", ClusterController, :status
   end
 
   # Other scopes may use custom stacks.
