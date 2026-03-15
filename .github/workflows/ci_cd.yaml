@@ -23,3 +23,7 @@ jobs:
           mix deps.get
           mix compile --warnings-as-errors
         working-directory: ecs_elixir_cluster
+
+      - name: Run tests
+        working-directory: ecs_elixir_cluster
+        run: elixir --sname ci_test --cookie ci_cookie -S mix test
