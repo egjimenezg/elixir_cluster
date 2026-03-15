@@ -9,7 +9,8 @@ defmodule EcsElixirCluster.Application do
   def start(_type, _args) do
     children = [
       EcsElixirClusterWeb.Telemetry,
-      {DNSCluster, query: Application.get_env(:ecs_elixir_cluster, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:ecs_elixir_cluster, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: EcsElixirCluster.PubSub},
       # Start a worker by calling: EcsElixirCluster.Worker.start_link(arg)
       # {EcsElixirCluster.Worker, arg},
